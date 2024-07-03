@@ -645,37 +645,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
   
-    // Prevent zooming with touch gestures
-    document.addEventListener('gesturestart', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-  }, { passive: false });
-
-  document.addEventListener('gesturechange', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-  }, { passive: false });
-
-  document.addEventListener('gestureend', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-  }, { passive: false });
-
-  document.addEventListener('touchstart', function (e) {
-      if (e.touches.length > 1) {
-          e.preventDefault();
-      }
-  }, { passive: false });
-
-  document.addEventListener('touchmove', function (e) {
-      if (e.scale !== 1) {
-          e.preventDefault();
-      }
-  }, { passive: false });
-
-  // Prevent zooming with key events
-  window.addEventListener('keydown', function (e) {
-      if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0')) {
-          e.preventDefault();
-      }
-  });
+  
